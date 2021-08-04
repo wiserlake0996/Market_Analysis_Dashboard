@@ -1,7 +1,6 @@
 # Import necessary libraries
 import json
 import joblib
-import yfinance as yf
 import pandas as pd
 import streamlit as st
 
@@ -24,9 +23,9 @@ def app():
     if 'main_data.csv' not in os.listdir('data'):
         st.markdown("Please upload data through `Upload Data` page!")
     else:
-        data = yf.download("AAPL", start="2019-01-01", end="2019-04-30")
+        #data = yf.download("AAPL", start="2019-01-01", end="2019-04-30")
 
-        #data = pd.read_csv('data/main_data.csv')
+        data = pd.read_csv('data/stock_data.csv')
 
         # Create the model parameters dictionary 
         params = {}

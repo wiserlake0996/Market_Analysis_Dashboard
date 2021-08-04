@@ -3,15 +3,13 @@ import numpy as np
 import pandas as pd
 from pages import utils
 import os
-import yfinance as yf
 
 def app():
 	
 	if 'main_data.csv' not in os.listdir('data'):
 		st.markdown("Please upload data through `Upload Data` page!")
 	else:
-		df = pd.read_csv('data/main_data.csv')
-		df = yf.download("AAPL", start="2019-01-01", end="2019-04-30")
+		df = pd.read_csv('data/stock_data.csv')
 
 		st.markdown("### A small demo to show redundant columns of a csv")
 

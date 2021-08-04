@@ -2,7 +2,6 @@
 import pandas as pd
 import streamlit as st 
 import os
-import yfinance as yf
 def app():
     """This application is created to help the user change the metadata for the uploaded file. 
     They can perform merges. Change column names and so on.  
@@ -30,7 +29,7 @@ def app():
     
     if st.button('Start download'):
         pbar.progress(10)
-        data = yf.download("AAPL", start="2019-01-01", end="2019-04-30")
+        data = pd.read_csv('data/stock_data.csv')
         st.dataframe(data)
         pbar.progress(100)
 
