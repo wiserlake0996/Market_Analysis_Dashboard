@@ -1,0 +1,6 @@
+column_name,type
+Open,numerical
+High,numeric
+Low,numerical
+Adj Close,numerical
+Volume,numerical
